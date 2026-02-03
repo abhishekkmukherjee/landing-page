@@ -53,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark" className={`${sora.variable} ${manrope.variable}`} suppressHydrationWarning>
       <body className="overflow-x-hidden">
+        <div aria-hidden className="fireflies" />
         {children}
       </body>
     </html>

@@ -1,19 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import GlowCard from "@/components/ui/GlowCard";
+import caseStudy1 from "@/app/case-studies/case study 1.jpg";
+import caseStudy2 from "@/app/case-studies/case study 2.jpg";
 
 const studies = [
   {
     title: "EdTech brand increased qualified leads by 3.2x in 90 days",
     detail: "Rebuilt the webinar funnel, refreshed the paid media creative, and introduced mid-funnel nurture.",
     metric: "+3.2x qualified leads",
-    image: "/images/case-1.webp"
+    image: caseStudy1
   },
   {
     title: "Coach scaled webinar registrations while reducing CPL by 41%",
     detail: "Introduced offer-led segmentation and optimized landing page messaging for intent.",
     metric: "-41% cost per lead",
-    image: "/images/case-2.webp"
+    image: caseStudy2
   }
 ];
 

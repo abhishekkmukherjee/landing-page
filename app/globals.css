@@ -42,45 +42,102 @@ body {
   position: relative;
 }
 
-body::before,
-body::after {
-  content: "";
+
+.fireflies {
   position: fixed;
-  inset: -20vh -10vw;
+  inset: 0;
   pointer-events: none;
   z-index: 0;
+}
+
+.fireflies::before,
+.fireflies::after {
+  content: "";
+  position: absolute;
+  inset: -10vh -10vw;
   background-repeat: no-repeat;
+  animation: fireflyDrift 16s linear infinite;
   mix-blend-mode: screen;
-  opacity: 0.55;
 }
 
-body::before {
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)),
-    linear-gradient(135deg, rgba(120, 180, 255, 0.85), rgba(120, 180, 255, 0));
-  background-size: 280px 3px, 180px 2px;
+.fireflies::before {
+  background-image:
+    radial-gradient(circle, rgba(255, 224, 138, 0.75) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(120, 180, 255, 0.6) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(78, 240, 198, 0.7) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(255, 154, 110, 0.7) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.5) 0 2px, transparent 3px);
+  background-size: 240px 240px, 320px 320px, 280px 280px, 360px 360px, 200px 200px;
+  background-position: 10% 20%, 70% 10%, 30% 70%, 80% 60%, 50% 40%;
+  filter: blur(0.4px);
+  opacity: 0.7;
+}
+
+.fireflies::after {
+  background-image:
+    radial-gradient(circle, rgba(255, 224, 138, 0.7) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(190, 140, 255, 0.55) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(78, 240, 198, 0.6) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(255, 122, 89, 0.65) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.4) 0 2px, transparent 3px);
+  background-size: 260px 260px, 300px 300px, 220px 220px, 340px 340px, 180px 180px;
+  background-position: 20% 80%, 85% 30%, 40% 50%, 65% 85%, 15% 35%;
   filter: blur(0.6px);
-  animation: cometFall 5.5s linear infinite;
+  opacity: 0.55;
+  animation-duration: 22s;
 }
 
-body::after {
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)),
-    linear-gradient(135deg, rgba(78, 240, 198, 0.75), rgba(78, 240, 198, 0));
-  background-size: 340px 3px, 220px 2px;
-  filter: blur(0.7px);
-  animation: cometFall 7.5s linear infinite 1.2s;
-  opacity: 0.45;
-}
-
-@keyframes cometFall {
+@keyframes fireflyDrift {
   0% {
-    transform: translate3d(-35%, -45%, 0) rotate(-12deg);
-    background-position: -30% -40%;
+    transform: translate3d(-2%, -2%, 0);
+  }
+  50% {
+    transform: translate3d(3%, 2%, 0);
   }
   100% {
-    transform: translate3d(45%, 150%, 0) rotate(-12deg);
-    background-position: 140% 160%;
+    transform: translate3d(-2%, -2%, 0);
   }
 }
+
+.review-marquee {
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+.review-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: reviewScroll 28s linear infinite;
+}
+
+.review-card {
+  min-width: 240px;
+  padding: 0.85rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--color-border) / 0.2);
+  background: rgb(var(--color-surface) / 0.08);
+  color: rgb(var(--color-text));
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.review-card-lg {
+  min-width: 320px;
+  padding: 1rem 1.4rem;
+  font-size: 0.95rem;
+}
+
+@keyframes reviewScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 
 html[data-theme="light"] body {
   background-image: radial-gradient(circle at top, rgba(78, 240, 198, 0.18), transparent 45%),

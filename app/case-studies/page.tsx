@@ -3,25 +3,28 @@ import Link from "next/link";
 import GlowCard from "@/components/ui/GlowCard";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import caseStudy1 from "./case study 1.jpg";
+import caseStudy2 from "./case study 2.jpg";
+import caseStudy3 from "./case study 3.jpg";
 
 const caseStudies = [
   {
     title: "EdTech brand increased qualified leads by 3.2x in 90 days",
     summary: "Rebuilt the funnel around high-intent segments and introduced a two-step nurture sequence.",
     metrics: ["+3.2x qualified leads", "+28% show-up rate", "-19% CAC"],
-    image: "/images/case-1.webp"
+    image: caseStudy1
   },
   {
     title: "Coach scaled webinar registrations while reducing CPL by 41%",
     summary: "Simplified positioning, improved ad-to-landing message match, and refined targeting.",
     metrics: ["-41% cost per lead", "+2.1x registrations", "+17% close rate"],
-    image: "/images/case-2.webp"
+    image: caseStudy2
   },
   {
     title: "Creator academy doubled launch revenue with lifecycle automation",
     summary: "Introduced segmented email flows and a micro-offer to warm leads before launch week.",
     metrics: ["2x launch revenue", "+34% email CTR", "+22% upsell rate"],
-    image: "/images/case-3.webp"
+    image: caseStudy3
   }
 ];
 

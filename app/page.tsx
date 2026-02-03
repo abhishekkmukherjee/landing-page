@@ -1,10 +1,10 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
-import TrustBar from "@/components/sections/TrustBar";
 import Leaders from "@/components/sections/Leaders";
 import ProfitFocus from "@/components/sections/ProfitFocus";
 import Partners from "@/components/sections/Partners";
+import Reviews from "@/components/sections/Reviews";
 import Insights from "@/components/sections/Insights";
 import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
@@ -17,10 +17,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <TrustBar />
         <Leaders />
         <ProfitFocus />
         <Partners />
+        <Reviews />
         <Insights />
         <Services />
         <Process />

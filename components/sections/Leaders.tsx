@@ -1,5 +1,13 @@
 import Image from "next/image";
 
+const trustedLogos = [
+  { name: "Skill Nation", src: "/images/leaders/skill%20nation.webp" },
+  { name: "Masters Union", src: "/images/leaders/masters%20union.webp" },
+  { name: "Growth School", src: "/images/leaders/growth%20school.svg" },
+  { name: "Skill House", src: "/images/leaders/skill%20house.webp" },
+  { name: "Clapingo", src: "/images/leaders/clapingo.webp" }
+];
+
 const leaders = [
   {
     name: "Rajiv Talreja",
@@ -32,9 +40,24 @@ export default function Leaders() {
     <section className="section py-20">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-6">
-          <h2 className="headline text-3xl text-primary sm:text-4xl lg:text-5xl">
-            Empowering leaders across niches
-          </h2>
+          <div className="flex flex-col gap-5">
+            <div className="rounded-3xl border border-subtle bg-surface px-6 py-8 text-center shadow-glow">
+              <p className="text-xs uppercase tracking-[0.35em] text-steel">Trusted by leaders worldwide</p>
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-8">
+                {trustedLogos.map((logo) => (
+                  <Image
+                    key={logo.name}
+                    src={logo.src}
+                    alt={logo.name}
+                    width={170}
+                    height={56}
+                    className="h-9 w-auto opacity-80"
+                    unoptimized
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {leaders.map((leader) => (
               <div

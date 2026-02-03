@@ -24,6 +24,7 @@ export default function Hero() {
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <PrimaryButton href="#contact" label="Request a growth audit" />
+            <SecondaryButton href="#contact" label="Let’s talk" />
             <SecondaryButton href="/case-studies" label="See case studies" />
           </div>
           <div className="flex flex-wrap gap-8 text-sm text-steel">
@@ -74,16 +75,6 @@ export default function Hero() {
                 </p>
               </div>
             </div>
-          </div>
-          <div className="absolute -bottom-10 -right-6 hidden w-48 animate-float sm:block">
-            <Image
-              src="/images/hero-orbit.webp"
-              alt="Abstract growth orbit"
-              width={240}
-              height={240}
-              className="h-auto w-full"
-              priority
-            />
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
@@ -12,9 +13,8 @@ export default function Navbar() {
   return (
     <header className="section sticky top-0 z-30 border-b border-subtle bg-night/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 text-sm font-semibold tracking-wide text-primary">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-surface">S</span>
-          ScaleX Growth
+        <Link href="/" className="flex items-center gap-3 text-sm font-semibold tracking-wide text-primary">
+          <Image src="/images/leaders/logo_svg_white.svg" alt="ScaleX logo" width={56} height={56} />
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-steel md:flex">
           {navItems.map((item) => (

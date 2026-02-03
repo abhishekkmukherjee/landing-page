@@ -1,3 +1,4 @@
+import Image from "next/image";
 import GlowCard from "@/components/ui/GlowCard";
 
 const kpis = [
@@ -63,13 +64,18 @@ export default function Insights() {
               </svg>
             </div>
             <div className="grid grid-cols-4 gap-2">
-              {[70, 45, 80, 60].map((height, index) => (
-                <div key={height} className="h-24 rounded-2xl border border-subtle bg-surface p-2">
-                  <div
-                    className="w-full rounded-xl bg-gradient-to-t from-aurora/70 via-white/20 to-transparent origin-bottom motion-reduce:animate-none animate-rise"
-                    style={{ height: `${height}%` }}
+              {["/images/w1.png", "/images/w2.png", "/images/w3.png", "/images/w4.png"].map((src, index) => (
+                <div
+                  key={src}
+                  className="flex aspect-square items-center justify-center rounded-2xl border border-subtle bg-surface p-3"
+                >
+                  <Image
+                    src={src}
+                    alt={`W${index + 1}`}
+                    width={120}
+                    height={120}
+                    className="h-full w-full object-contain"
                   />
-                  <p className="mt-2 text-xs text-steel">W{index + 1}</p>
                 </div>
               ))}
             </div>
