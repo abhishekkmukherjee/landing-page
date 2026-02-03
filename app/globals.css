@@ -4,9 +4,9 @@
 
 :root {
   color-scheme: dark;
-  --color-ink: 11 12 16;
-  --color-night: 7 8 11;
-  --color-void: 16 19 26;
+  --color-ink: 16 20 55;
+  --color-night: 30 37 93;
+  --color-void: 24 30 80;
   --color-text: 231 237 247;
   --color-muted: 167 176 192;
   --color-surface: 255 255 255;
@@ -34,10 +34,52 @@ html[data-theme="light"] {
 
 body {
   @apply bg-night text-haze font-body antialiased;
-  background-image: radial-gradient(circle at top, rgba(78, 240, 198, 0.08), transparent 50%),
-    radial-gradient(circle at 30% 20%, rgba(255, 122, 89, 0.08), transparent 45%),
-    linear-gradient(180deg, rgb(var(--color-night)) 0%, rgb(var(--color-night)) 60%, rgb(var(--color-ink)) 100%);
+  background-image: radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(78, 240, 198, 0.1), transparent 45%),
+    radial-gradient(circle at 30% 70%, rgba(255, 122, 89, 0.1), transparent 50%),
+    linear-gradient(180deg, #2b3380 0%, #1e255d 45%, #101622 100%);
   min-height: 100vh;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -20vh -10vw;
+  pointer-events: none;
+  z-index: 0;
+  background-repeat: no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+
+body::before {
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)),
+    linear-gradient(135deg, rgba(120, 180, 255, 0.85), rgba(120, 180, 255, 0));
+  background-size: 280px 3px, 180px 2px;
+  filter: blur(0.6px);
+  animation: cometFall 5.5s linear infinite;
+}
+
+body::after {
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)),
+    linear-gradient(135deg, rgba(78, 240, 198, 0.75), rgba(78, 240, 198, 0));
+  background-size: 340px 3px, 220px 2px;
+  filter: blur(0.7px);
+  animation: cometFall 7.5s linear infinite 1.2s;
+  opacity: 0.45;
+}
+
+@keyframes cometFall {
+  0% {
+    transform: translate3d(-35%, -45%, 0) rotate(-12deg);
+    background-position: -30% -40%;
+  }
+  100% {
+    transform: translate3d(45%, 150%, 0) rotate(-12deg);
+    background-position: 140% 160%;
+  }
 }
 
 html[data-theme="light"] body {

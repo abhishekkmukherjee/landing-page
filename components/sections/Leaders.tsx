@@ -41,7 +41,7 @@ export default function Leaders() {
                 key={leader.name}
                 className="relative overflow-hidden rounded-[28px] border border-subtle bg-surface p-6 shadow-glow transition duration-500 hover:-translate-y-1"
               >
-                <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-aurora/20 blur-2xl" />
+                <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-aurora/25 blur-2xl motion-safe:animate-drift" />
                 <div className="relative z-10 flex flex-col items-center text-center">
                   <div className="mb-4 flex h-44 w-full items-center justify-center">
                     <Image

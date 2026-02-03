@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
 import Leaders from "@/components/sections/Leaders";
 import ProfitFocus from "@/components/sections/ProfitFocus";
+import Partners from "@/components/sections/Partners";
 import Insights from "@/components/sections/Insights";
 import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
@@ -19,6 +20,7 @@ export default function Home() {
         <TrustBar />
         <Leaders />
         <ProfitFocus />
+        <Partners />
         <Insights />
         <Services />
         <Process />

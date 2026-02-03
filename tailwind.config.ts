@@ -42,6 +42,10 @@ const config: Config = {
           "0%": { strokeDashoffset: "600", opacity: "0" },
           "100%": { strokeDashoffset: "0", opacity: "1" }
         },
+        drift: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(12px)" }
+        },
         shimmer: {
           "0%": { backgroundPosition: "0% 50%" },
           "100%": { backgroundPosition: "100% 50%" }
@@ -53,6 +57,7 @@ const config: Config = {
         rise: "rise 0.9s ease forwards",
         pulseSoft: "pulseSoft 3s ease-in-out infinite",
         draw: "draw 1.6s ease forwards",
+        drift: "drift 8s ease-in-out infinite",
         shimmer: "shimmer 10s ease infinite"
       }
     }
