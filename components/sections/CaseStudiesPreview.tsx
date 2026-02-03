@@ -34,7 +34,7 @@ export default function CaseStudiesPreview() {
           </div>
           <Link
             href="/case-studies"
-            className="rounded-full border border-strong bg-surface px-5 py-2 text-sm font-semibold text-primary transition hover:border-strong hover:bg-surface-strong"
+            className="rounded-xl border border-strong bg-surface px-5 py-2 text-sm font-semibold text-primary transition hover:border-strong hover:bg-surface-strong"
           >
             View all case studies
           </Link>

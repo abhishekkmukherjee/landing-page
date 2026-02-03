@@ -66,14 +66,14 @@ export default function CaseStudiesPage() {
               </GlowCard>
             ))}
           </div>
-          <div className="rounded-3xl border border-subtle bg-surface p-8 text-center">
+          <div className="rounded-2xl border border-subtle bg-surface p-8 text-center">
             <h2 className="headline text-2xl text-primary">Want a custom growth plan?</h2>
             <p className="mt-3 text-steel">
               Share your offer and current funnel and we will send a short plan with priority actions.
             </p>
             <Link
               href="mailto:hello@scalexgrowth.com"
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-aurora px-6 py-3 text-sm font-semibold text-ink shadow-soft transition hover:translate-y-[-1px]"
+              className="mt-6 inline-flex items-center justify-center rounded-xl bg-aurora px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:translate-y-[-1px] hover:bg-aurora/90"
             >
               Request the plan
             </Link>

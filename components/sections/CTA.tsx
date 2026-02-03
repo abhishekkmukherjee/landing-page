@@ -4,9 +4,9 @@ export default function CTA() {
   return (
     <section id="contact" className="section py-20">
       <div className="mx-auto max-w-6xl">
-        <div className="relative overflow-hidden rounded-3xl border border-subtle bg-gradient-to-br from-white/10 via-white/5 to-transparent p-12 shadow-glow">
-          <div className="absolute -right-10 top-6 h-44 w-44 rounded-full bg-aurora/20 blur-3xl" />
-          <div className="absolute -left-10 bottom-0 h-44 w-44 rounded-full bg-ember/20 blur-3xl" />
+        <div className="relative overflow-hidden rounded-2xl border border-subtle bg-gradient-to-br from-white/10 via-white/6 to-transparent p-12 shadow-glow">
+          <div className="absolute -right-10 top-6 h-44 w-44 rounded-full bg-aurora/12 blur-3xl" />
+          <div className="absolute -left-10 bottom-0 h-44 w-44 rounded-full bg-ember/10 blur-3xl" />
           <div className="relative z-10 grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-center">
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.3em] text-steel">Ready to grow?</p>

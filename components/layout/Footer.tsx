@@ -58,7 +58,7 @@ export default function Footer() {
       </div>
       <div className="mt-12 w-full text-center">
         <h2 className="headline w-full select-none text-[clamp(4.5rem,16vw,14rem)] font-semibold uppercase tracking-tight leading-[0.85]">
-          <span className="block translate-y-6 bg-gradient-to-b from-white/70 via-white/35 to-white/5 bg-clip-text text-transparent">
+          <span className="block translate-y-6 bg-gradient-to-b from-white/55 via-white/25 to-white/5 bg-clip-text text-transparent">
             ScaleX
           </span>
         </h2>

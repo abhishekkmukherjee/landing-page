@@ -7,9 +7,9 @@ export default function GlowCard({
 }) {
   return (
     <div
-      className={`group relative rounded-3xl bg-surface border border-subtle shadow-glow overflow-hidden transition duration-500 hover:border-strong hover:shadow-soft hover:-translate-y-1 transition-transform ${className ?? ""}`}
+      className={`group relative overflow-hidden rounded-2xl border border-subtle bg-surface shadow-glow transition duration-500 hover:-translate-y-1 hover:border-strong hover:shadow-soft ${className ?? ""}`}
     >
-      <div className="pointer-events-none absolute -inset-6 opacity-0 blur-2xl transition duration-500 group-hover:opacity-100 bg-gradient-to-r from-aurora/20 via-white/10 to-ember/20" />
+      <div className="pointer-events-none absolute -inset-6 opacity-0 blur-2xl transition duration-500 group-hover:opacity-100 bg-gradient-to-r from-aurora/16 via-white/8 to-ember/16" />
       {children}
     </div>
   );

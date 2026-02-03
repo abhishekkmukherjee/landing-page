@@ -9,8 +9,8 @@ const config: Config = {
         night: "rgb(var(--color-night) / <alpha-value>)",
         steel: "rgb(var(--color-muted) / <alpha-value>)",
         haze: "rgb(var(--color-text) / <alpha-value>)",
-        aurora: "#4ef0c6",
-        ember: "#ff7a59",
+        aurora: "#4f8cff",
+        ember: "#2dd4bf",
         void: "rgb(var(--color-void) / <alpha-value>)"
       },
       fontFamily: {
@@ -18,8 +18,8 @@ const config: Config = {
         body: ["var(--font-body)", "system-ui", "sans-serif"]
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(255,255,255,0.06), 0 20px 60px rgba(0,0,0,0.45)",
-        soft: "0 10px 40px rgba(0,0,0,0.35)"
+        glow: "0 0 0 1px rgba(255,255,255,0.08), 0 16px 48px rgba(0,0,0,0.4)",
+        soft: "0 12px 32px rgba(0,0,0,0.28)"
       },
       keyframes: {
         float: {

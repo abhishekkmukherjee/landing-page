@@ -16,7 +16,7 @@ const steps = [
 export default function Process() {
   return (
     <section id="process" className="section py-20">
-      <div className="mx-auto max-w-6xl rounded-3xl border border-subtle bg-surface p-10">
+      <div className="mx-auto max-w-6xl rounded-2xl border border-subtle bg-surface p-10">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
           <div className="space-y-5">
             <p className="text-xs uppercase tracking-[0.3em] text-steel">Process</p>

@@ -43,11 +43,11 @@ export default function Hero() {
           </div>
         </div>
         <div className="relative motion-reduce:animate-none animate-rise">
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-aurora/30 via-white/5 to-ember/20 blur-3xl" />
-          <div className="relative rounded-3xl border border-subtle bg-void/70 p-6 shadow-glow">
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-aurora/18 via-white/6 to-ember/12 blur-3xl" />
+          <div className="relative rounded-2xl border border-subtle bg-void/80 p-6 shadow-glow">
             <div className="flex items-center justify-between">
               <p className="text-sm text-steel">Pipeline health</p>
-              <span className="rounded-full bg-aurora/10 px-3 py-1 text-xs text-aurora">Live</span>
+              <span className="rounded-full bg-aurora/14 px-3 py-1 text-xs text-aurora">Live</span>
             </div>
             <div className="mt-6 space-y-5">
               <div className="space-y-2">

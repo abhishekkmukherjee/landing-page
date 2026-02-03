@@ -49,8 +49,8 @@ export default function Insights() {
               >
                 <defs>
                   <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stopColor="#4ef0c6" />
-                    <stop offset="100%" stopColor="#ff7a59" />
+                    <stop offset="0%" stopColor="#4f8cff" />
+                    <stop offset="100%" stopColor="#2dd4bf" />
                   </linearGradient>
                 </defs>
                 <path
@@ -60,7 +60,7 @@ export default function Insights() {
                   strokeWidth="3"
                   className="[stroke-dasharray:600] [stroke-dashoffset:600] motion-reduce:animate-none animate-draw"
                 />
-                <circle cx="350" cy="20" r="4" fill="#4ef0c6" className="animate-pulseSoft" />
+                <circle cx="350" cy="20" r="4" fill="#4f8cff" className="animate-pulseSoft" />
               </svg>
             </div>
             <div className="grid grid-cols-4 gap-2">

@@ -41,7 +41,7 @@ export default function Leaders() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-5">
-            <div className="rounded-3xl border border-subtle bg-surface px-6 py-8 text-center shadow-glow">
+            <div className="rounded-2xl border border-subtle bg-surface px-6 py-8 text-center shadow-glow">
               <p className="text-xs uppercase tracking-[0.35em] text-steel">Trusted by leaders worldwide</p>
               <div className="mt-6 flex flex-wrap items-center justify-center gap-8">
                 {trustedLogos.map((logo) => (
@@ -76,7 +76,7 @@ export default function Leaders() {
                       unoptimized
                     />
                   </div>
-                  <span className="rounded-full bg-indigo-600/70 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                  <span className="rounded-full border border-aurora/30 bg-aurora/15 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-aurora">
                     {leader.niche}
                   </span>
                   <p className="mt-4 text-lg font-semibold text-primary">{leader.name}</p>

@@ -24,7 +24,7 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="inline-flex items-center gap-2 rounded-full border border-subtle bg-surface px-3 py-2 text-xs font-semibold text-primary transition hover:border-strong hover:bg-surface-strong"
+      className="inline-flex items-center gap-2 rounded-xl border border-subtle bg-surface px-3 py-2 text-xs font-semibold text-primary transition hover:border-strong hover:bg-surface-strong"
       aria-label="Toggle light and dark theme"
     >
       <span className="h-2 w-2 rounded-full bg-aurora" />

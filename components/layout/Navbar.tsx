@@ -11,7 +11,7 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <header className="section sticky top-0 z-30 border-b border-subtle bg-night/80 backdrop-blur-xl">
+    <header className="section sticky top-0 z-30 border-b border-subtle bg-night/75 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between">
         <Link href="/" className="flex items-center gap-3 text-sm font-semibold tracking-wide text-primary">
           <Image src="/images/leaders/logo_svg_white.svg" alt="ScaleX logo" width={56} height={56} />
@@ -27,7 +27,7 @@ export default function Navbar() {
           <ThemeToggle />
           <Link
             href="#contact"
-            className="rounded-full border border-strong bg-surface px-4 py-2 text-sm font-semibold text-primary transition hover:border-strong hover:bg-surface-strong"
+            className="rounded-xl border border-strong bg-surface px-4 py-2 text-sm font-semibold text-primary transition hover:border-strong hover:bg-surface-strong"
           >
             Book a call
           </Link>
