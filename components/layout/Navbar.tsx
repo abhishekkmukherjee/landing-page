@@ -3,10 +3,10 @@ import Link from "next/link";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const navItems = [
-  { label: "Services", href: "#services" },
+  { label: "Services", href: "/#services" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Process", href: "#process" },
-  { label: "Contact", href: "#contact" }
+  { label: "Process", href: "/#process" },
+  { label: "Contact", href: "/#contact" }
 ];
 
 export default function Navbar() {
@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <Link
-            href="#contact"
+            href="/#contact"
             className="rounded-xl border border-strong bg-surface px-4 py-2 text-sm font-semibold text-primary transition hover:border-strong hover:bg-surface-strong"
           >
             Book a call

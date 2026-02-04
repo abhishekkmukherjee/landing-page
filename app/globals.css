@@ -28,8 +28,14 @@ html[data-theme="light"] {
   --color-border-strong: 13 18 30;
 }
 
-* {
+html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -50,6 +56,9 @@ body {
   pointer-events: none;
   z-index: 0;
   opacity: 0.6;
+  contain: paint;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .fireflies::before,
@@ -97,6 +106,7 @@ body {
   gap: 1rem;
   width: max-content;
   animation: reviewScroll 28s linear infinite;
+  will-change: transform;
 }
 
 .review-card {
@@ -204,5 +214,66 @@ html[data-theme="light"] body {
     background-image: linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
     background-size: 24px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .backdrop-blur-xl {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .bg-night\/75 {
+    background-color: rgb(var(--color-night) / 0.88);
+  }
+
+  .glass {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .fireflies {
+    opacity: 0.35;
+  }
+
+  .fireflies::before {
+    background-size: 48px 48px;
+    opacity: 0.28;
+  }
+
+  .fireflies::after {
+    opacity: 0.55;
+    mix-blend-mode: normal;
+  }
+
+  .review-track {
+    animation-duration: 40s;
+  }
+
+  .blur-3xl {
+    filter: blur(32px);
+  }
+
+  .blur-2xl {
+    filter: blur(18px);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 12px 36px rgba(0, 0, 0, 0.35);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  }
+
+  .motion-safe\:animate-drift,
+  .motion-safe\:animate-float {
+    animation: none;
   }
 }

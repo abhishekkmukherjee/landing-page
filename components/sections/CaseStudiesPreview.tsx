@@ -7,13 +7,13 @@ import caseStudy2 from "@/app/case-studies/case study 2.jpg";
 const studies = [
   {
     title: "EdTech brand increased qualified leads by 3.2x in 90 days",
-    detail: "Rebuilt the webinar funnel, refreshed the paid media creative, and introduced mid-funnel nurture.",
+    detail: "Segmented by role, introduced a diagnostic landing page, and built a two-step nurture + reminder flow.",
     metric: "+3.2x qualified leads",
     image: caseStudy1
   },
   {
     title: "Coach scaled webinar registrations while reducing CPL by 41%",
-    detail: "Introduced offer-led segmentation and optimized landing page messaging for intent.",
+    detail: "Refined offer positioning, rebuilt ad-to-landing message match, and added pre-qualifying segmentation.",
     metric: "-41% cost per lead",
     image: caseStudy2
   }

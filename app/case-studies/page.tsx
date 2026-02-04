@@ -10,19 +10,76 @@ import caseStudy3 from "./case study 3.jpg";
 const caseStudies = [
   {
     title: "EdTech brand increased qualified leads by 3.2x in 90 days",
-    summary: "Rebuilt the funnel around high-intent segments and introduced a two-step nurture sequence.",
+    summary:
+      "A cohort-based certification platform for instructional designers needed more qualified pipeline without scaling spend.",
+    sections: [
+      {
+        label: "Client",
+        text: "Cohort-based certification platform serving instructional designers and L&D teams."
+      },
+      {
+        label: "Challenge",
+        text: "High traffic but low MQL rate and flat webinar attendance."
+      },
+      {
+        label: "Strategy",
+        text: "Segmented ads by role, introduced a diagnostic landing page, and built a two-step nurture + reminder flow."
+      },
+      {
+        label: "Impact",
+        text: "Higher intent leads with stronger attendance quality and lower acquisition cost."
+      }
+    ],
     metrics: ["+3.2x qualified leads", "+28% show-up rate", "-19% CAC"],
     image: caseStudy1
   },
   {
     title: "Coach scaled webinar registrations while reducing CPL by 41%",
-    summary: "Simplified positioning, improved ad-to-landing message match, and refined targeting.",
+    summary:
+      "An executive leadership coach needed consistent registrations while protecting margin across paid channels.",
+    sections: [
+      {
+        label: "Client",
+        text: "High-ticket executive leadership coach running monthly live workshops."
+      },
+      {
+        label: "Challenge",
+        text: "CPL rising quarter over quarter and webinar show-up rate stuck below target."
+      },
+      {
+        label: "Strategy",
+        text: "Refined offer positioning, rebuilt ad-to-landing message match, and added pre-qualifying segmentation."
+      },
+      {
+        label: "Impact",
+        text: "More registrations from qualified leaders and stronger sales call readiness."
+      }
+    ],
     metrics: ["-41% cost per lead", "+2.1x registrations", "+17% close rate"],
     image: caseStudy2
   },
   {
     title: "Creator academy doubled launch revenue with lifecycle automation",
-    summary: "Introduced segmented email flows and a micro-offer to warm leads before launch week.",
+    summary:
+      "A creator-led academy wanted steadier revenue between launches and higher conversion during launch week.",
+    sections: [
+      {
+        label: "Client",
+        text: "Creator-led academy teaching audience monetization through cohort programs."
+      },
+      {
+        label: "Challenge",
+        text: "Launch spikes followed by long lulls and cold leads at the start of each cycle."
+      },
+      {
+        label: "Strategy",
+        text: "Launched a micro-offer, built segmented lifecycle flows, and added win-back automations."
+      },
+      {
+        label: "Impact",
+        text: "Warm pipeline heading into launch with higher upsell and retention momentum."
+      }
+    ],
     metrics: ["2x launch revenue", "+34% email CTR", "+22% upsell rate"],
     image: caseStudy3
   }
@@ -44,21 +101,27 @@ export default function CaseStudiesPage() {
           </div>
           <div className="grid gap-8 lg:grid-cols-3">
             {caseStudies.map((study) => (
-              <GlowCard key={study.title} className="flex h-full flex-col p-6">
-                <div className="space-y-5">
-                  <Image
-                    src={study.image}
-                    alt={study.title}
-                    width={520}
-                    height={320}
-                    className="h-44 w-full rounded-2xl object-cover"
-                  />
-                  <div className="space-y-3">
-                    <h2 className="text-lg font-semibold text-primary">{study.title}</h2>
-                    <p className="text-sm text-steel">{study.summary}</p>
-                  </div>
+              <GlowCard key={study.title} className="flex h-full flex-col gap-5 p-6">
+                <Image
+                  src={study.image}
+                  alt={study.title}
+                  width={520}
+                  height={320}
+                  className="h-44 w-full rounded-2xl object-cover"
+                />
+                <div className="space-y-3">
+                  <h2 className="text-lg font-semibold text-primary">{study.title}</h2>
+                  <p className="text-sm text-steel">{study.summary}</p>
                 </div>
-                <ul className="mt-4 space-y-2 text-sm text-aurora">
+                <div className="space-y-4 text-sm text-steel">
+                  {study.sections.map((section) => (
+                    <div key={section.label} className="space-y-1">
+                      <p className="text-[0.65rem] uppercase tracking-[0.3em] text-steel">{section.label}</p>
+                      <p className="text-sm text-haze">{section.text}</p>
+                    </div>
+                  ))}
+                </div>
+                <ul className="mt-auto space-y-2 text-sm text-aurora">
                   {study.metrics.map((metric) => (
                     <li key={metric}>{metric}</li>
                   ))}
